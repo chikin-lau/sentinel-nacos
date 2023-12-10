@@ -182,6 +182,7 @@ public class DegradeController {
 //        List<DegradeRuleEntity> rules = repository.findAllByMachine(MachineInfo.of(app, ip, port));
 //        return sentinelApiClient.setDegradeRuleOfMachine(app, ip, port, rules);
 //    }
+
     private boolean publishRules(String app, String ip, Integer port) throws Exception {
         List<DegradeRuleEntity> rules = repository.findAllByMachine(MachineInfo.of(app, ip, port));
         // 增加的代码 保存到nacos
